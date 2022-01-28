@@ -1,35 +1,29 @@
-import React from 'react';
-import Paper from './components/Paper';
-import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
-import { useState } from 'react';
-const App =() => {
-  const[sidebarOpen,setSidebarOpen] =useState(false);
+import React from "react";
+import Paper from "./components/Paper";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import { useState } from "react";
+const App = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
-  const openSidebar = () =>{
-      setSidebarOpen(true);
-  }
-  const closeSidebar = () =>{
-      setSidebarOpen(false);
-  }
-  
-  
-  return(
-      <div className ="grid grid-cols-6 md-col-span-2 font-sans">
-          <div className='col-span-1'>
-            <Sidebar  sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
-            </div>
-            <div className='col-span-5 '>
-          <Navbar  sidebarOpen ={sidebarOpen} openSidebar={openSidebar} />
-          <Paper />
-          
-          
-          </div>
-         
-        
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  return (
+    <div className="flex justify-between h-screen overflow-y-hidden">
+      <div
+        className={`${
+          sidebarOpen ? "w-72" : "w-0 lg:w-16"
+        } transition-all duration-300 ease-in-out absolute lg:relative left-0 top-0`}
+      >
+        <Sidebar toggleSidebar={toggleSidebar} sidebarOpen={sidebarOpen} />
       </div>
-  )
-}
+      <div className="flex-1 overflow-auto">
+        <Navbar toggleSidebar={toggleSidebar} />
+        <Paper />
+      </div>
+    </div>
+  );
+};
 export default App;
-
-
