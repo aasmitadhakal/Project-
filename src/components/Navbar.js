@@ -22,7 +22,7 @@ const Navbar = ({ toggleSidebar }) => {
           autoComplete="off"
           aria-label="Search talk"
         ></input>
-        <button classame="bg-blue-800 px-4 p-1  text-white rounded-full ">
+        <button className="bg-blue-800 px-4 p-1  text-white rounded-full ">
           Search
         </button>
       </div>
