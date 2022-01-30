@@ -5,6 +5,7 @@ const Navbar = ({ toggleSidebar }) => {
       <div className="flex ">
         <span onClick={toggleSidebar}>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <svg className="w-6 h-6"
          fill="none" 
          stroke="currentColor"
@@ -15,6 +16,8 @@ const Navbar = ({ toggleSidebar }) => {
               strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
 =======
+=======
+>>>>>>> 4845700be8565c2486aa5352f6d372012a4f23a9
           <svg
             className="stroke-cyan-500 pr-4"
             xmlns="http://www.w3.org/2000/svg"
@@ -30,6 +33,9 @@ const Navbar = ({ toggleSidebar }) => {
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
+<<<<<<< HEAD
+>>>>>>> 4845700be8565c2486aa5352f6d372012a4f23a9
+=======
 >>>>>>> 4845700be8565c2486aa5352f6d372012a4f23a9
         </span>
         <input
