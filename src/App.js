@@ -4,6 +4,7 @@ import {Route,Routes} from 'react-router-dom';
 import Paper from "./components/Paper";
 import Navbar from "./components/Navbar";
 import { useState } from "react";
+import Form from "./Form";
 
 // import About from "./About";
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
       {/* <Navbar /> */}
     <Route path ='/' element = {<Paper />} />
       <Route path ='/paper' element = {<Paper/>} />
+      <Route path ='/form' element = {<Form/>} />
     </Routes>
     </div>
     </div>

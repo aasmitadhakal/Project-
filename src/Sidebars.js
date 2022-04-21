@@ -58,7 +58,9 @@ const Sidebar = ({ toggleSidebar, sidebarOpen }) => {
         </div>
         {toggle &&(
         <div className=''>
-               <h1>Add</h1>
+              <Link to="/form">
+               <span>Add</span>
+               </Link>
                <h1>List</h1>
                </div>
 
